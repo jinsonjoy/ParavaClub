@@ -129,6 +129,22 @@
     width: 100%;
     margin-bottom: 10px;
   }
+  .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+}
+
+.table.custom-table th,
+.table.custom-table td {
+  white-space: nowrap; /* prevents wrapping text */
+}
+
+@media (max-width: 768px) {
+  .table.custom-table {
+    font-size: 12px; /* smaller font on mobile */
+  }
+}
+
 }
 
 
@@ -167,6 +183,35 @@
     text-align: center;
     padding: 40px 15px;
   }
+  /* Home page icon/club name mobile */
+  .site-logo img {
+  max-width: 100%;
+  height: auto; /* maintains aspect ratio */
+}
+
+/* Adjust size for desktop */
+.logo-small {
+  width: 65px;
+  height: auto;
+}
+
+.logo-large {
+  width: 250px;
+  height: auto;
+}
+
+/* Adjust size for mobile */
+@media (max-width: 768px) {
+  .logo-small {
+    width: 40px; /* smaller on mobile */
+  }
+  .logo-large {
+    width: 150px; /* smaller on mobile */
+  }
+}
+
+
+
 }
 
 </style>
@@ -187,25 +232,25 @@
     </div>
 
 
-    <header class="site-navbar py-4" role="banner">
+    <header class="site-navbar py-4" role="banner" id="home">
 
       <div class="container">
         <div class="d-flex align-items-center">
           <div class="site-logo display-flex">
             <a href="index.html">
-              <img style="width: 58px;height: 60px;" src="static/assets/images/1.png" alt="Logo">
-              <img style="width: 250px;height: 40px;" src="static/assets/images/black.png" alt="Logo">
+              <img class="logo-small" src="static/assets/images/1.png" alt="Logo">
+              <img class="logo-large" src="static/assets/images/black.png" alt="Logo">
             </a>
           </div>
 
           <div class="ml-auto">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="matches.html" class="nav-link">Matches</a></li>
-                <li><a href="players.html" class="nav-link">Players</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <nav class="site-navigation position-relative text-right px-4 pt-3" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block fixed-top pt-3">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#matches" class="nav-link">Matches</a></li>
+                <!-- <li><a href="players.html" class="nav-link">Players</a></li> -->
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
               </ul>
             </nav>
 
@@ -334,7 +379,7 @@
                   <h3 class="mb-3"></h3>
                   <div class="author d-flex align-items-center">
                     <div class="text">
-                      <h4></h4>
+                      <h4>Team KCA</h4>
                       <span></span>
                     </div>
                   </div>
@@ -376,15 +421,15 @@
     <div class="site-section bg-dark">
       <div class="container">
 
-        <h2 style="text-align: center;" class="fixture-title">KCL SEASON 4 FIXTURE</h2>
+        <h2 style="text-align: center;" class="fixture-title" id="matches">KCL SEASON 4 FIXTURE</h2>
 
         <div class="swiper myPoolSlider">
           <div class="swiper-wrapper">
 
             <!-- ======== TABLE 1 ======== -->
             <div class="swiper-slide">
-              <div class="widget-next-match pool-box">
-                <table class="table custom-table">
+              <div class="widget-next-match pool-box table-responsive">
+                <table class="table custom-table table custom-table">
                   <thead>
                     <tr>
                       <th colspan="6" class="text-center" style="border: 1px solid rgb(117, 114, 114);">
@@ -837,7 +882,7 @@
       </div>
     </div> -->
 
-    <div class="container site-section">
+    <div class="container site-section" id="blog">
       <div class="row">
         <div class="col-6 title-section">
           <h2 class="heading">Our Blog</h2>
@@ -873,8 +918,11 @@
       </div>
     </div>
 
-    <div class="site-section bg-dark">
+    <div class="site-section bg-dark" id="contact">
       <div class="container">
+        <div class="col-6 title-section">
+          <h2 class="heading">Contact Us</h2>
+        </div>
         <div class="row">
           <div class="col-lg-7">
             <form action="#">
@@ -978,7 +1026,7 @@
   </div>
   <!-- .site-wrap -->
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -991,7 +1039,7 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <!-- <script src="js/jquery.mb.YTPlayer.min.js"></script> -->
 
   <!-- home image auto scroll  -->
   <script>
@@ -999,7 +1047,6 @@
 
     const images = [
       "static/assets/images/bg_1.jpg",
-      "static/assets/images/bg_2.jpg",
       "static/assets/images/bg_3.jpg",
       "static/assets/images/bg_4.jpg",
       "static/assets/images/bg_5.jpg",
@@ -1104,7 +1151,19 @@
     AOS.init();
   </script>
 
+<!-- script for table mobile view -->
+ <script>
+  var myPoolSlider = new Swiper('.myPoolSlider', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoHeight: true, // <-- adjusts slider height based on table
+});
 
+ </script>
 
 </body>
 
