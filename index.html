@@ -34,209 +34,312 @@
 
 </head>
 
-
 <style>
   /* ---------------------------
    Latest News / Carousel Images
 --------------------------- */
-.latest-news .post-entry {
-  margin-bottom: 20px;
-}
+  .latest-news .post-entry {
+    margin-bottom: 20px;
+  }
 
-.latest-news .post-entry img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 0px;
-}
+  .latest-news .post-entry img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0px;
+  }
 
-/* ---------------------------
+  /* ---------------------------
    Swiper Buttons
 --------------------------- */
-.swiper-button-next,
-.swiper-button-prev {
-  scale: 0.45;
-}
+  .swiper-button-next,
+  .swiper-button-prev {
+    scale: 0.45;
+  }
 
-/* ---------------------------
+  /* ---------------------------
    Team Logo
 --------------------------- */
-.team-logo {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-}
+  .team-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
 
-/* ---------------------------
+  /* ---------------------------
    Header Logo Adjustment
 --------------------------- */
-.site-logo img:first-child {
-  width: 50px;
-}
-.site-logo img:last-child {
-  width: 180px;
-}
+  .site-logo img:first-child {
+    width: 50px;
+  }
 
-/* ---------------------------
+  .site-logo img:last-child {
+    width: 180px;
+  }
+
+  /* ---------------------------
    Hero Section
 --------------------------- */
-#hero-section {
-  transition: background-image 1s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-}
+  #hero-section {
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+  }
 
-#hero-section h1 {
-  font-size: 36px;
-}
-#hero-section p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+  #hero-section h1 {
+    font-size: 36px;
+  }
 
-/* ---------------------------
+  #hero-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ---------------------------
    Navigation Mobile
 --------------------------- */
-@media (max-width: 991px) {
-  .site-menu.main-menu {
-    display: none !important;
-  }
-  .site-menu-toggle {
-    display: block !important;
-  }
-}
+  @media (max-width: 991px) {
+    .site-menu.main-menu {
+      display: none !important;
+    }
 
-/* ---------------------------
+    .site-menu-toggle {
+      display: block !important;
+    }
+  }
+
+  /* ---------------------------
    Hero Section Mobile
 --------------------------- */
-@media (max-width: 768px) {
-  #hero-section .col-lg-5 {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
-  #hero-section h1 {
-    font-size: 28px;
-  }
-  #hero-section p {
-    font-size: 14px;
-  }
-  #hero-section .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
-}
+  @media (max-width: 768px) {
+    #hero-section .col-lg-5 {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
 
-.table.custom-table th,
-.table.custom-table td {
-  white-space: nowrap; /* prevents wrapping text */
-}
+    #hero-section h1 {
+      font-size: 28px;
+    }
 
-@media (max-width: 768px) {
-  .table.custom-table {
-    font-size: 12px; /* smaller font on mobile */
+    #hero-section p {
+      font-size: 14px;
+    }
+
+    #hero-section .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table.custom-table th,
+    .table.custom-table td {
+      white-space: nowrap;
+    }
+
+    .table.custom-table {
+      font-size: 12px;
+    }
   }
-}
 
-}
-
-
-/* ============================================================
+  /* ============================================================
    FOOTER SECTION — FIXED (MOVE OUT OF MEDIA QUERY)
 ============================================================ */
-.footer-section {
-  position: relative;
-  background-image: url('static/assets/images/footer-bg.jpg'); /* your background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 60px 0;
-}
-
-.footer-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 0;
-}
-
-.footer-section * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Footer Mobile */
-@media (max-width: 768px) {
   .footer-section {
-    text-align: center;
-    padding: 40px 15px;
+    position: relative;
+    background-image: url('static/assets/images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 60px 0;
   }
-  /* Home page icon/club name mobile */
-  .site-logo img {
-  max-width: 100%;
-  height: auto; /* maintains aspect ratio */
-}
 
-/* Adjust size for desktop */
-.logo-small {
-  width: 65px;
-  height: auto;
-}
+  .footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
 
-.logo-large {
-  width: 250px;
-  height: auto;
-}
+  .footer-section * {
+    position: relative;
+    z-index: 1;
+  }
 
-/* Adjust size for mobile */
-@media (max-width: 768px) {
+  /* Footer Mobile */
+  @media (max-width: 768px) {
+    .footer-section {
+      text-align: center;
+      padding: 40px 15px;
+    }
+
+    /* Home page icon/club name mobile */
+    .site-logo img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  /* Desktop Logo Sizes */
   .logo-small {
-    width: 40px; /* smaller on mobile */
+    width: 65px;
+    height: auto;
   }
+
   .logo-large {
-    width: 150px; /* smaller on mobile */
+    width: 250px;
+    height: auto;
+  }
+
+  /* Mobile Logo Sizes */
+  @media (max-width: 768px) {
+    .logo-small {
+      width: 40px;
+    }
+
+    .logo-large {
+      width: 150px;
+    }
+  }
+
+  /* MOBILE FIXES */
+  @media (max-width: 767px) {
+    .logo-large {
+      max-width: 140px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #about h1,
+    .section-title h1,
+    h1.text-white {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* FOOTER — MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+
+    .footer-section .row>div {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .footer-section .widget {
+      width: 100%;
+    }
+
+    .footer-section .widget ul li a {
+      font-size: 15px;
+      display: block;
+    }
+
+    .footer-section {
+      padding: 30px 15px;
+    }
+
+    .footer-section p {
+      white-space: nowrap;
+      font-size: 12px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  /* EXTRA small screen support (320–360px) */
+  @media (max-width: 360px) {
+    .footer-section p {
+      font-size: 10.5px;
+    }
+  }
+
+  /* Ensure social links stay in one row on small screens */
+  /* Mobile: center social links in a single line */
+@media (max-width: 768px) {
+  .social-row {
+    display: flex;               /* flex layout */
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    gap: 30px;                   /* spacing between links */
+    flex-wrap: nowrap;           /* prevent wrapping */
+  }
+
+  .social-row .widget {
+    margin-bottom: 0;            /* remove default margin */
+  }
+
+  .social-row .widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social-row .widget ul li {
+    display: inline-block;
+  }
+
+  .social-row .widget ul li a {
+    color: #fff;                 /* link color */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 
-/* MOBILE FIXES */
-@media (max-width: 767px) {
-
-  /* Logo spacing */
-  .logo-large {
-    max-width: 140px;      /* reduce size (optional) */
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* Desktop: keep default Bootstrap layout */
+@media (min-width: 769px) {
+  .social-row {
+    display: flex;
+    gap: 20px;                   /* spacing for desktop */
   }
 
-  /* Fix gap for “Who We Are” heading */
-  #about h1,
-  .section-title h1,
-  h1.text-white {
-    margin-top: 30px;
-    margin-bottom: 20px;
+  .social-row .widget ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
   }
+}
 
-  
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.pool-box {
+  width: 100%;
+  max-width: 500px; /* so 2 slides fit on desktop */
+}
+
+.table-responsive {
+  overflow-x: auto;
 }
 
 
 
-
-}
 
 </style>
+
+
 
 
 
@@ -784,7 +887,7 @@
               </div>
             </div>
 
-            <!-- ======== TABLE 3 (Auto scroll starts) ======== -->  
+            <!-- ======== TABLE 3 (Auto scroll starts) ======== -->
 
           </div>
 
@@ -914,26 +1017,26 @@
         <div class="col-lg-6">
           <div class="custom-media d-flex">
             <div class="static/assets/img mr-4">
-              <img src="static/assets/images/img_1.jpg" alt="Image" class="img-fluid">
+              <img src="static/assets/images/Turfcup.jpeg" alt="Image" class="img-fluid">
             </div>
-            <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Nadrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
-              <p><a href="#">Read more</a></p>
+            <div class="text px-4">
+              <span class="meta">August 20, 2025</span>
+              <h3 class="mb-4"><a href="#">Parava Turfcup Event Highlights</a></h3>
+              <p>Parava Turfcup delivers pure turf-cricket thrill — power hits, tight overs, and highlight moments!</p>
+              <!-- <p><a href="#">Read more</a></p> -->
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="custom-media d-flex">
             <div class="static/assets/images/img_1">
-              <img src="static/assets/images/img_1.jpg" alt="Image" class="img-fluid">
+              <img src="static/assets/images/suhail.jpeg" alt="Image" class="img-fluid">
             </div>
-            <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Nadrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
-              <p><a href="#">Read more</a></p>
+            <div class="text px-4">
+              <span class="meta">August 20, 2025</span>
+              <h3 class="mb-4"><a href="#">Parava Turfcup Event Highlights</a></h3>
+              <p><span>Hero of the League</span>The ultimate game-changer who dominated every match with consistent brilliance.</p>
+              <!-- <p><a href="#">Read more</a></p> -->
             </div>
           </div>
         </div>
@@ -958,15 +1061,16 @@
                 <input type="text" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="" class="form-control" id="" cols="30" rows="2" placeholder="Write something..."></textarea>
+                <textarea name="" class="form-control" id="" cols="30" rows="2"
+                  placeholder="Write something..."></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary py-3 px-5" value="Send Message">
               </div>
-            </form>  
+            </form>
           </div>
           <div class="col-lg-4 ml-auto">
-            
+
             <ul class="list-unstyled">
               <li class="mb-2">
                 <strong class="text-white d-block">Address</strong>
@@ -990,42 +1094,32 @@
 
 
 
-     <footer class="footer-section">
+    <footer class="footer-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget mb-0">
-              <ul class="list-unstyled links">
-                <li><a href="#">Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
+        <div class="row social-row">
+          <div class="col-3">
             <div class="widget mb-3">
               <ul class="list-unstyled links">
                 <li><a href="#">Youtube</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-3">
             <div class="widget mb-3">
               <ul class="list-unstyled links">
                 <li><a href="#">Facebook</a></li>
               </ul>
             </div>
           </div>
-
-          <div class="col-lg-3">
+          <div class="col-3">
             <div class="widget mb-3">
               <ul class="list-unstyled links">
-                
                 <li><a href="#">Instagram</a></li>
-                
               </ul>
             </div>
           </div>
-
         </div>
+
 
         <div class="row text-center">
           <div class="col-md-12">
@@ -1033,15 +1127,15 @@
               <p>
                 <script>
                   document.write(new Date().getFullYear());
-                </script> All rights reserved<i
-                  aria-hidden="true"></i> by <a href="" target="_blank">Parava Arts, Sports & Cultural Club</a>
+                </script> All rights reserved<i aria-hidden="true"></i> by <a href="" target="_blank">Parava Arts,
+                  Sports & Cultural Club</a>
               </p>
             </div>
           </div>
 
         </div>
       </div>
-    </footer> 
+    </footer>
 
 
 
@@ -1134,19 +1228,28 @@
   <!-- script for pool -->
   <script>
     var swiper = new Swiper(".myPoolSlider", {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      speed: 900, // smooth animation
-    });
+  slidesPerView: 1,     // default: mobile shows 1 table
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  speed: 800,
+
+  // RESPONSIVE BREAKPOINTS
+  breakpoints: {
+    992: {
+      slidesPerView: 2,   // desktop shows 2 full tables
+    }
+  }
+});
+
+
   </script>
 
   <script>
@@ -1173,19 +1276,19 @@
     AOS.init();
   </script>
 
-<!-- script for table mobile view -->
- <script>
-  var myPoolSlider = new Swiper('.myPoolSlider', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  autoHeight: true, // <-- adjusts slider height based on table
-});
+  <!-- script for table mobile view -->
+  <script>
+    var myPoolSlider = new Swiper('.myPoolSlider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoHeight: true, // <-- adjusts slider height based on table
+    });
 
- </script>
+  </script>
 
 </body>
 
